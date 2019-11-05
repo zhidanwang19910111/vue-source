@@ -1,0 +1,22 @@
+{
+  "name": "my-vue",
+  "version": "1.0.0",
+  "description": "use to learn vue source code",
+  "main": "index.js",
+  "scripts": {
+    "dev:amd": "./node_modules/.bin/rollup src/main.js -f amd -o ./dist/vue.amd.js",
+    "dev:cjs": "./node_modules/.bin/rollup src/main.js -f cjs -o ./dist/vue.cjs.js",
+    "dev:es": "./node_modules/.bin/rollup src/main.js -f es -o ./dist/vue.es.js",
+    "dev:iife": "./node_modules/.bin/rollup src/main.js -f iife -o ./dist/vue.iife.js",
+    "dev:umd": "./node_modules/.bin/rollup src/main.js -f umd -o ./dist/vue.umd.js",
+    "build:all": "npm run dev:amd && npm run dev:cjs && npm run dev:es && npm run dev:iife"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "Dan Wang",
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^1.26.3"
+  }
+}
